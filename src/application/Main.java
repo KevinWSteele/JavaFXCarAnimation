@@ -19,7 +19,6 @@ final StringBuilder key = new StringBuilder();
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			
 			primaryStage.setTitle("Kevin Steele, Assignment 11");
 	        Group root = new Group();
 	        Rectangle Rec = new Rectangle(0,30, 50, 10);
@@ -33,12 +32,8 @@ final StringBuilder key = new StringBuilder();
 	                30.0, 20.0,
 	                40.0, 30.0 } );
 	        poly.setFill(Color.RED);
-	        
-	        root.getChildren().add(Rec);
-	        root.getChildren().add(circle);
-	        root.getChildren().add(circle2);
-	        root.getChildren().add(poly);
-	        
+	        root.getChildren().addAll(Rec, circle, circle2, poly);
+	     
 	        final Timeline timeline = new Timeline();
 	        timeline.setCycleCount(Animation.INDEFINITE);
 	        timeline.setAutoReverse(false);
